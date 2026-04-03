@@ -1,0 +1,109 @@
+/* --- 1. ПЕРЕМЕННЫЕ И ОБЩИЕ СТИЛИ --- */
+:root {
+    --bg: #2c3e50;
+    --card: #34495e;
+    --accent: #e67e22;
+    --nav: #1a252f;
+    --text: #ecf0f1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* --- 2. СТРУКТУРА (ГДЕ СТОЯТ БЛОКИ) --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Навигация на Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--nav);
+    padding: 15px;
+}
+
+/* Сетка каталога на Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Нижние блоки на Flexbox */
+.flex-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.box {
+    flex: 1;
+    background: var(--nav);
+    padding: 20px;
+    border-radius: 10px;
+}
+/* --- 3. КАРТОЧКИ ТОВАРОВ --- */
+.card {
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 4px solid var(--accent);
+    transition: 0.3s ease; /* Плавность */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Эффект приподнимания */
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    background-color: #444;
+    object-fit: cover;
+}
+
+/* --- 4. КНОПКИ И ТЕКСТ --- */
+.btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #d35400;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* --- 5. ПОДВАЛ (FOOTER) --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--nav);
+    margin-top: 60px;
+}
